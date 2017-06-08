@@ -1,0 +1,17 @@
+<div>
+    <div class="error" style="color:red;">{{$ctrl.error}}</div>
+    <form ng-submit="$ctrl.login()">
+        <label>Username:</label>
+        <input ng-model="$ctrl.username" type="text" name="username" value=""/>
+        <label>Password:</label>
+        <input ng-model="$ctrl.password" type="password" name="password" value=""/>
+
+        <label>Require MFA</label>
+        <select ng-model="$ctrl.requireMFA" ng-options="option for option in ['true', 'false']"></select>
+        <label>Already enrolled in MFA</label>
+        <select ng-model="$ctrl.enrolledInMFA" ng-options="option for option in ['true', 'false']"></select>
+
+        <input type="submit" id="submit" value="Submit" />
+    </form>
+    <div>{{$ctrl.username}}</div>
+</div>

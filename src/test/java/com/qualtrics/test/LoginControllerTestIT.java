@@ -47,6 +47,6 @@ public class LoginControllerTestIT {
     public void getLogin() throws Exception {
         ResponseEntity<String> response = template.getForEntity(base.toString() + "login",
                 String.class);
-        assertThat(response.getBody(), equalTo("login.html"));
+        assertThat(response.getBody(), equalTo("index.html"));
     }
 }
